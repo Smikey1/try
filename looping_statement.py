@@ -42,3 +42,23 @@ for i in range(1,15):
         break
 
     print(f"The value of i is: -->{i}")
+
+import random
+guess_counter=1
+win_num = random.randint(0,100)
+game_over = False
+num= int(input("Please, make a guess:"))
+
+while not game_over:
+    if num == win_num:
+        print(f"Hurry! Exactly Macthed! {guess_counter} time")
+        game_over = True
+    else:
+        print("Too Low") if num < win_num else print("Too High")
+        # if num < win_num:
+        #     print("Too Low")
+        # else:
+        #     print("Too High")   
+        guess_counter += 1
+        print("Wrong Answer")
+        num = int(input("guess again:"))
