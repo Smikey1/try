@@ -23,6 +23,16 @@ for i in user_num:  # "4573"
     sum1 += int(i)
 print(f"The final sum was: {sum1}")
 
+'''
+# Un optimized code:
+full_name = input("please enter your full name:")
+i = 0
+
+while i < len(full_name):
+    print(f"{full_name[i]}:{full_name.lower().count(full_name[i])}")
+    i+=1
+'''
+
 full_name = input("please enter your full name:")
 i = 0
 store =""
