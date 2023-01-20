@@ -85,3 +85,21 @@ and if {reversed = true}--> yo default parameter haina yo **kwargs, output must 
 
 # FYI --> you can try with list comprehension too
 '''
+
+user_input = input("please enter true for reverse:")
+print([i[-1::-1].title() for i in list_of_fruit] if bool(user_input.title()) == True else [i.title() for i in list_of_fruit])
+
+print(reversed("abced"))
+
+# Solution:
+def my_func(any_list,**kwargs):
+    ''' 
+    reversed = False (default)
+    To reverse a list you must give {reversed = True}
+    '''
+    if kwargs.get("reversed"):
+        return [fruit[-1::-1].title() for fruit in any_list]
+    else:
+        return [fruit.title() for fruit in any_list]
+
+print(my_func(list_of_fruit,reversed=True))
