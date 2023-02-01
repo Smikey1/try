@@ -115,6 +115,7 @@ print(tuple(filter(lambda a: a%2==0,num_list)))  # filter object converted into 
 
 '''
 Zip function  --> converted to pair
+must have equal length
 '''
 big_char = ["A","B","C","D"]
 small_char = ["a","b","c","d"]
@@ -140,3 +141,41 @@ def a fun which take a many numerical list: FYI (lambda fun)
 given l1 = [1,2,3],[4,5,6],[7,8,9]
 such as l1  --> return the avg of: (1+4+7)/3, (2+5+8)/3 ... SO ON
 '''
+avg_calculator = lambda *args: [sum(pair)//len(pair) for pair in zip(*args)]
+print(avg_calculator([1,2,3],[4,5,6],[7,8,9]))
+
+'''
+Any and All function  --> converted to pair
+'''
+
+num_list1= [2,4,6,8,10]
+num_list12=[1,3,5,7,9]
+
+my_list = [True,False,True]
+
+print(all(my_list))  #Ouput --> boolean {True}
+
+print(any(my_list))  #Ouput --> boolean {True}
+
+def check_even(any_list):
+    even_list =[]
+    for i in any_list:
+        even_list.append(i%2==0)
+    return even_list
+
+print(check_even(num_list1))
+
+print(all([i%2==0 for i in num_list1]))
+
+
+# Practice of all and any (Level: Difficult)
+def sum(*args):
+    if(all( [(type(element)==int or type(element)==float) for element in args])):
+        total_sum =0
+        for i in args:
+            total_sum += i
+        return total_sum
+    else:
+        return "Int or float are only"
+
+print(sum(1,2,3.5,4.5))
