@@ -156,9 +156,6 @@ def join_strings(*args):
 print(join_strings("Sarthak"," Shrestha"))
 
 
-
-
-
 class Bicycle:
     def __init__(self,gear=5):
         self.gear = gear
