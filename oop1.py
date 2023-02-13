@@ -69,7 +69,7 @@ class Laptop:
     
     @classmethod
     def count_obje(self):
-        return f"You have {Laptop.count_total} created {self.count_obje} of laptop in your {self.__name__} Store"
+        return f"You have {Laptop.count_total} created of laptop in your {self.__name__} Store"
 
 dell = Laptop("dell")
 hp = Laptop("hp")
