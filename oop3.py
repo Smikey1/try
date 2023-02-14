@@ -3,16 +3,26 @@ class Engine:
     def __init__(self,kg,qty):
         self.kg=kg
         self.qty= qty
+    
+    def createEngine(self):
+        return f"Single engine created"
 
 class Ford(Engine):
     def __init__(self,kg, qty,ford_design):
         super().__init__(kg, qty)
         self.ford_design=ford_design
+    
+    def createEngine(self):
+        return f"Ford engine created"
 
 class Nano(Engine):
     def __init__(self, kg, qty,nano_design):
         super().__init__(kg, qty)
         self.nano_design=nano_design
+
+
+f = Ford(1,2,3)
+print(f.createEngine())
 
 # Multi-level Inheritance:
 # for more visit here: https://simplesnippets.tech/wp-content/uploads/2018/04/java-types-of-inheritance.jpg
